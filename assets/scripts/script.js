@@ -12,17 +12,18 @@ let techs = ['bootstrap',
     'node',
     'react'];
 
-createCardsFromTechs(techs);
+    createCardsFromTechs(techs);
 
 function createCardsFromTechs(techs){
 
-    let card = [];
+    let cards = [];
 
     for(let tech of techs){
-        card.push(createPairFromTech(tech))
+        cards.push(createPairFromTech(tech))
     }
 
-    console.log(cards);
+    console.log(cards.flatMap(pair => pair));
+    return cards.flatMap(pair => pair);
 }
 
 function createPairFromTech(tech){
