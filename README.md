@@ -11,7 +11,7 @@ An project of my course, ProgramdorBr
  ---
 <h1>
 
-  <a href="cmoraes5.github.io/JogoDaMemoria/">Play<a>
+  <a href="cmoraes5.github.io/jogodamemoria/">Play<a>
   
 <h1>
   
