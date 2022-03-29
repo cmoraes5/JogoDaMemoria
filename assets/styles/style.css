@@ -12,7 +12,8 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ccf5ff;
+    background-color: #d7ccff;
+    overflow: hidden;
 }
 
 .card{
@@ -50,6 +51,27 @@ body{
     color: #1a102c;
     background-color: #5d05ff;
     font-size: 1.5rem;
+    transition: all .3s ease-in-out;
+}
+
+.card_back:hover{
+    box-shadow: 0px 0px 10px #5d05ff;
+    animation: shake 1s .3s ease-in-out alternate infinite;
+    transition: all .5s ease-in-out;
+}
+
+@keyframes shake{
+    0%{
+        transform: scale(1) rotateZ(0);
+    }
+
+    25%{
+        transform: scale(1) rotateZ(-45deg);
+    }
+
+    100%{
+        transform: scale(1.1) rotateZ(45deg);
+    }
 }
 
 #gameOver{
@@ -90,16 +112,36 @@ body{
 
 @media screen and (max-width: 670px){
 
+    body{
+        height: 100vh;
+    }
+
     #gameBoard{
-        background-color: blueviolet;
-        max-width: 90vw;
+        /* max-width: 90vw;
+        height: 90vh; */
+
+        margin: 1rem;
+
+        width: 90%;
+        height: 90%;
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
         display: grid;
         grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
         gap: 30px;
     }
 
     .card{
-        width: 4rem;
-        height: 4rem;
+        width: 12vw;
+        height: 12vw;
+    }
+
+    img{
+        width: 10vw;
     }
 }
